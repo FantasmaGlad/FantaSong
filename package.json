@@ -1,0 +1,42 @@
+{
+  "name": "fantasong",
+  "version": "1.0.0",
+  "description": "Application musicale avec Electron et Vite",
+  "main": "main.js",
+  "author": "Ton Nom",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite", 
+    "build": "vite build",
+    "preview": "vite preview",
+    "start": "electron .",
+    "build:exe": "electron-builder"
+  },
+  "dependencies": {
+    "electron": "^28.0.0",
+    "vue": "^3.3.4"
+  },
+  "devDependencies": {
+    "vite": "^4.3.0",
+    "electron-builder": "^23.0.0"
+  },
+  "build": {
+    "appId": "com.fantasong.app",
+    "productName": "FantaSong",
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "build/icon.ico"
+    },
+    "mac": {
+      "target": "dmg",
+      "icon": "build/icon.icns"
+    },
+    "linux": {
+      "target": "AppImage",
+      "icon": "build/icon.png"
+    }
+  }
+}
